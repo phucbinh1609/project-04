@@ -84,7 +84,7 @@ button {
     box-shadow: 4px 3px 10px -1px rgba(191, 41, 0, 0.4);
 }
 
-.section__heading {
+.section-heading {
     font-weight: 700;
     font-size: 5.2rem;
     line-height: 1.19;
@@ -224,7 +224,7 @@ button {
 .hero-list-item__title {
     font-family: Sora, sans-serif;
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: 1.4;
     line-height: 1;
     color: #181e52;
 }
@@ -573,14 +573,13 @@ button {
     background: #fff6ed;
 }
 
-.sertive__top {
+.service__top {
     text-align: center;
 }
 
 .service__desc {
     margin-bottom: 15px;
     font-family: Sora, sans-serif;
-    font-style: normal;
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 1;
@@ -607,10 +606,22 @@ button {
 }
 
 .service-item__heading {
+    position: relative;
+    padding-left: 12px;
     font-weight: 600;
     font-size: 2.2rem;
     line-height: 1;
     color: #000958;
+}
+
+.service-item__heading::before {
+    position: absolute;
+    inset: 0 auto 0 0;
+    content: "";
+    display: inline-block;
+    width: 2px;
+    border-radius: 1px;
+    background: linear-gradient(#ff5b2e, #ffa187);
 }
 
 .service-item__desc {
@@ -632,7 +643,7 @@ button {
 
 .service-item__more::after {
     content: url(../icons/arrow-up-right.svg);
-    margin-left: 1px 0 0 5px;
+    margin: 1px 0 0 5px;
 }
 
 .service__media {
@@ -644,8 +655,8 @@ button {
     content: "";
     position: absolute;
     height: 350px;
-    right: 16px;
     left: 16px;
+    right: 16px;
     bottom: 0;
     background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
     border-radius: 10px;
